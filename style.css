@@ -1,0 +1,320 @@
+@import url(./styles/reset.css);
+
+:root{
+    --cor-rosa:#F894A4;
+    --cor-branco:#c6c6c6;
+    --cor-marrom-escuro:#592C1C;
+    --cor-marrom-claro:#733B27;
+    --cor:#d6d6d6;
+    --cor-preto: rgb(32, 32, 32);
+    --font-titulo: "Roboto", sans-serif;
+    --font-texto: "Exo 2", sans-serif;
+}
+
+body{
+    background-color: var(--cor-branco);
+    color: var(--cor-preto);
+    font-family: var(--font-texto);
+    font-size: 20px;
+}
+
+h3{
+    font-size: 26px;
+    font-family: var(--font-titulo);
+    padding: 1em;
+}
+
+h2{
+    font-size: 32px;
+    font-family: var(--font-titulo);
+    padding: 1em;
+    font-weight: 700;
+}
+
+h1{
+    font-size: 38px;
+    font-family: var(--font-titulo);
+}
+
+
+header{
+    display: flex;
+    justify-content: center;
+    padding: 1em 0em;
+    background-color: var(--cor-preto);
+    color: var(--cor-branco);    
+}
+
+
+header div h1 a{
+    color: var(--cor-branco);
+    font-size: 15px;
+    text-decoration: none;
+}
+
+header div h1 a:hover{
+    color: var(--cor-marrom-claro);
+    font-size: 20px;
+}
+
+section{
+    padding: 1em;
+}
+
+.cabecalho-logo{
+    display: flex;
+    align-items: center;
+    gap: 1em;
+}
+
+.cabecalho-logo img{
+    width: 50px;
+    border-radius: 50%;
+}
+
+.cabecalho-logo h1{
+    font-size: 15px;
+}
+
+.cabecalho-lista{
+    display: none;
+}
+
+
+.home-titulo{
+    font-weight: 700;
+    font-size: 26px;
+    text-align:start;
+    padding: 1em;
+}
+
+
+.conteudo-home div p{
+    text-align: justify;
+    margin-bottom: 1em;
+}
+
+.conteudo-home div p b{
+    font-weight: 600;
+    color: var(--cor-marrom-claro);
+}
+
+.conteudo-home img{
+    width: 100%;
+}
+
+.conteudo-home div.foto-perfil img{
+    width: 50vw;
+    margin: 1em 0em 1em 23%;
+    border-radius: 24px;
+}
+
+.lista-fotos-curso-geoprocessamento{
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    justify-items: center;
+    align-items: center;
+}
+
+.lista-fotos-curso-geoprocessamento li{
+    grid-column: span 6;
+    border: 5px solid var(--cor-marrom-claro);
+    margin: 0.2em;
+    padding: 0.5em;
+    border-radius: 24px;
+}
+
+.conteudo-projeto{
+    text-align: center;
+    background-color: var(--cor-preto);
+    color: var(--cor-branco);
+}
+
+.conteudo-projeto h2{
+    color: #FFD700;
+}
+
+.conteudo-projeto p{
+    margin-bottom: 1em;
+    text-align: justify;
+}
+
+.conteudo-projeto p b{
+    font-weight: 600;
+    color: #FFD700;
+}
+
+.projetos-lista{
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 1em;
+}
+
+.projetos-lista li{
+    grid-column: span 12;
+}
+
+.projetos-lista li img{
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+}
+
+.projetos-lista li p{
+    padding: 1em;
+    text-align: center;
+}
+
+.projetos-lista li h3{
+    font-weight: 700;
+    color: #FFD700;
+}
+
+.historico-lista{
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    text-align: center;
+    gap: 0.5em;
+}
+
+.historico-lista li{
+    border-radius: 24px;
+    grid-column: span 12;
+    padding: 1em;
+}
+
+.historico-lista li:nth-child(4){
+    grid-row: 1;
+}
+
+.historico-lista li:nth-child(3){
+    grid-row: 2;
+}
+
+.historico-lista li:nth-child(2){
+    grid-row: 3;
+}
+
+
+.conteudo-historico li img {
+    width: 150px;
+    height: 50px;
+    padding: 0.1em;
+    background-color: var(--cor-branco);
+    border-radius: 5px;
+}
+
+.conteudo-historico h2{
+    text-align: center;
+}
+
+.conteudo-historico li h3{
+    font-size: 15px;
+    padding: 0.3em 0em 0.3em 0em;
+}
+
+.conteudo-historico li p{
+    font-size: 15px;
+}
+
+@media screen and (min-width: 720px){
+
+    header{
+        padding: 1em 10%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    header nav ul li a{
+        color: var(--cor-branco);
+        font-size: 15px;
+        text-decoration: none;
+    }
+
+    header nav ul li a:hover{
+        color: var(--cor-marrom-claro);
+        font-size: 20px;
+    }
+
+    .cabecalho-lista{
+        display: flex;
+        gap: 1em;
+    }
+
+    .conteudo-home{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 1em 10%;
+    }
+
+    .conteudo-home div.foto-perfil img{
+        margin: 0;
+        width: 250px;
+        height: 250px;
+    }
+
+    .lista-fotos-curso-geoprocessamento{
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+    }
+    
+    .lista-fotos-curso-geoprocessamento li{
+        grid-column: span 3;
+        border: none;
+    }
+
+    .conteudo-projeto{
+        padding: 1em 10%;
+    }
+
+    .ocultar{
+        display: none;
+    }
+
+    .projetos-lista{
+        gap: 0;
+    }
+
+    .projetos-lista li{
+        grid-column: span 12;
+        padding: 0.5em;
+    }
+    
+    .historico-lista li{
+        border-radius: 24px;
+        grid-column: span 3;
+        padding: 1em 0em;
+    }
+
+    .historico-lista li:nth-child(4){
+        grid-row-start:auto;
+    }
+    
+    .historico-lista li:nth-child(3){
+        grid-row-start:auto;
+    }
+    
+    .historico-lista li:nth-child(2){
+        grid-row-start:auto;
+    }
+
+    .conteudo-historico li img {
+        width: 140px;
+        height: 50px;
+        padding: 0.1em;
+    }
+    
+    .conteudo-historico li h3{
+        font-size: 18px;
+        padding: 0.3em 0em;
+    }
+    
+    .conteudo-historico li p{
+        font-size: 13px;
+    }
+
+
+}
